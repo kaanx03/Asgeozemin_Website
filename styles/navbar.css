@@ -1,0 +1,445 @@
+/* styles/components/navbar.css - Navbar Component Stilleri */
+
+/* Header Styles */
+.header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.company-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.contact-item i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-phone {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.secondary-phone {
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.social-link.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.social-link.email {
+  background: var(--primary-color);
+  color: white;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Navigation */
+.navbar {
+  background: var(--gradient-primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.navbar.scrolled {
+  padding: 0.3rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 1rem 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar.scrolled .nav-link::after {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-light);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Mobil İletişim Bilgileri - Hamburger Menüde Görünecek */
+.mobile-contact-info {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+.mobile-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.mobile-contact-item i {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+.mobile-contact-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mobile-primary-phone {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mobile-secondary-phone {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.mobile-social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.mobile-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.mobile-social-link.whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.mobile-social-link.linkedin {
+  background: #0077b5;
+  color: white;
+}
+
+.mobile-social-link.email {
+  background: var(--accent-color);
+  color: white;
+}
+
+.mobile-social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design - Navbar */
+@media (max-width: 1024px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row; /* Değiştirildi - sadece logo gösterilecek */
+    gap: 0.5rem;
+    text-align: left;
+    padding: 1rem 0.5rem;
+    justify-content: space-between;
+  }
+
+  .header {
+    padding: 0.5rem 0;
+  }
+
+  .logo-section {
+    flex-direction: row;
+    text-align: left;
+    gap: 0.75rem;
+  }
+
+  .logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .company-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .company-subtitle {
+    font-size: 0.65rem;
+    max-width: 200px;
+    line-height: 1.2;
+  }
+
+  /* Mobilde header'daki iletişim bilgilerini gizle */
+  .contact-info {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1002;
+    background: rgba(26, 54, 93, 0.9);
+    padding: 0.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+  }
+
+  .hamburger span {
+    background: var(--text-light);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background: linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.4s ease;
+    padding-top: 6rem;
+    z-index: 1001;
+    justify-content: flex-start;
+    gap: 2rem;
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  /* Mobil iletişim bilgilerini hamburger menüde göster */
+  .mobile-contact-info {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    background: var(--text-light);
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+    background: var(--text-light);
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .company-subtitle {
+    display: none;
+  }
+
+  .header-container {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .company-subtitle {
+    font-size: 0.6rem;
+    max-width: 180px;
+  }
+
+  .hamburger {
+    top: 1.5rem;
+    right: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .nav-menu {
+    padding-top: 5rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .mobile-contact-item {
+    font-size: 0.95rem;
+  }
+
+  .mobile-social-link {
+    width: 40px;
+    height: 40px;
+  }
+}

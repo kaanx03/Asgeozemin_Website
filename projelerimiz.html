@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projelerimiz - AS GEO ZEMİN</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/projelerimiz.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Component Placeholder -->
+    <div id="navbar-placeholder">
+      <!-- Navbar component buraya yüklenecek -->
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-bg">
+        <div class="page-header-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="page-header-content">
+          <nav class="breadcrumb">
+            <a href="index.html">Anasayfa</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Projelerimiz</span>
+          </nav>
+          <h1 class="page-title">Projelerimiz</h1>
+          <p class="page-subtitle">
+            Gerçekleştirdiğimiz projelerden görsel örnekler ve başarı
+            hikayelerimiz
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-header">
+          <h2>Proje Galerimiz</h2>
+          <p>
+            Projelerimizden seçilen fotoğrafları kategorilere göre
+            inceleyebilirsiniz
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i>
+            <span>Tümü</span>
+          </button>
+          <button class="filter-btn" data-filter="sondaj">
+            <i class="fas fa-hammer"></i>
+            <span>Sondaj</span>
+          </button>
+          <button class="filter-btn" data-filter="pressiometre">
+            <i class="fas fa-gauge"></i>
+            <span>Pressiometre</span>
+          </button>
+          <button class="filter-btn" data-filter="masw">
+            <i class="fas fa-wave-square"></i>
+            <span>MASW</span>
+          </button>
+          <button class="filter-btn" data-filter="rezistivite">
+            <i class="fas fa-bolt"></i>
+            <span>Rezistivite</span>
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Sondaj Projects -->
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj1.jpg"
+                alt="Sondaj Çalışması 1"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Zemin etüdü için SPT sondaj işlemi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj1.jpg', 'Sondaj Çalışması 1')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj2.jpg"
+                alt="Sondaj Çalışması 2"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Derinlemesine zemin araştırması</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj2.jpg', 'Sondaj Çalışması 2')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj3.jpg"
+                alt="Sondaj Çalışması 3"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Modern sondaj ekipmanları</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj3.jpg', 'Sondaj Çalışması 3')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj4.jpg"
+                alt="Sondaj Çalışması 4"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Saha çalışması detayları</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj4.jpg', 'Sondaj Çalışması 4')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj5.jpg"
+                alt="Sondaj Çalışması 5"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Uzman ekip çalışması</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj5.jpg', 'Sondaj Çalışması 5')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj6.jpg"
+                alt="Sondaj Çalışması 6"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Numune alma işlemi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj6.jpg', 'Sondaj Çalışması 6')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj7.jpg"
+                alt="Sondaj Çalışması 7"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Arazi çalışması</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj7.jpg', 'Sondaj Çalışması 7')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj8.jpg"
+                alt="Sondaj Çalışması 8"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Profesyonel ekipman</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj8.jpg', 'Sondaj Çalışması 8')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj9.jpg"
+                alt="Sondaj Çalışması 9"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Sondaj makinası operasyonu</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj9.jpg', 'Sondaj Çalışması 9')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="sondaj">
+            <div class="gallery-card">
+              <img
+                src="Foto/sondaj10.jpg"
+                alt="Sondaj Çalışması 10"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Sondaj Çalışması</h4>
+                  <p>Saha koordinasyon</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/sondaj10.jpg', 'Sondaj Çalışması 10')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Sondaj</div>
+            </div>
+          </div>
+
+          <!-- Pressiometre Projects -->
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre1.jpg"
+                alt="Pressiometre Testi 1"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Yerinde zemin mukavemet testi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre1.jpg', 'Pressiometre Testi 1')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre2.jpg"
+                alt="Pressiometre Testi 2"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Basınç test cihazı</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre2.jpg', 'Pressiometre Testi 2')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre3.jpg"
+                alt="Pressiometre Testi 3"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Zemin deformasyon analizi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre3.jpg', 'Pressiometre Testi 3')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre4.jpg"
+                alt="Pressiometre Testi 4"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Saha ölçüm işlemi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre4.jpg', 'Pressiometre Testi 4')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre5.jpg"
+                alt="Pressiometre Testi 5"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Test ekipmanı kurulumu</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre5.jpg', 'Pressiometre Testi 5')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre6.jpg"
+                alt="Pressiometre Testi 6"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Veri toplama süreci</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre6.jpg', 'Pressiometre Testi 6')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pressiometre">
+            <div class="gallery-card">
+              <img
+                src="Foto/pressiometre7.jpg"
+                alt="Pressiometre Testi 7"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Pressiometre Testi</h4>
+                  <p>Hassas ölçüm cihazları</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/pressiometre7.jpg', 'Pressiometre Testi 7')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Pressiometre</div>
+            </div>
+          </div>
+
+          <!-- MASW Projects -->
+          <div class="gallery-item" data-category="masw">
+            <div class="gallery-card">
+              <img src="Foto/masv1.jpg" alt="MASW Çalışması 1" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>MASW Çalışması</h4>
+                  <p>Çok kanallı yüzey dalgası analizi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/masv1.jpg', 'MASW Çalışması 1')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">MASW</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="masw">
+            <div class="gallery-card">
+              <img src="Foto/masv2.jpg" alt="MASW Çalışması 2" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>MASW Çalışması</h4>
+                  <p>Jeofizik veri toplama</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/masv2.jpg', 'MASW Çalışması 2')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">MASW</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="masw">
+            <div class="gallery-card">
+              <img src="Foto/masv3.jpg" alt="MASW Çalışması 3" loading="lazy" />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>MASW Çalışması</h4>
+                  <p>Sismik dalga analizi</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/masv3.jpg', 'MASW Çalışması 3')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">MASW</div>
+            </div>
+          </div>
+
+          <!-- Rezistivite Projects -->
+          <div class="gallery-item" data-category="rezistivite">
+            <div class="gallery-card">
+              <img
+                src="Foto/rezistivite1.jpg"
+                alt="Rezistivite Çalışması 1"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-content">
+                  <h4>Rezistivite Çalışması</h4>
+                  <p>Elektriksel rezistivite ölçümü</p>
+                  <button
+                    class="view-btn"
+                    onclick="openLightbox('Foto/rezistivite1.jpg', 'Rezistivite Çalışması 1')"
+                  >
+                    <i class="fas fa-search-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="category-badge">Rezistivite</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+          <button class="load-more-btn" id="loadMoreBtn">
+            <span>Daha Fazla Göster</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-nav">
+          <button class="lightbox-prev" onclick="changeLightboxImage(-1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="lightbox-next" onclick="changeLightboxImage(1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Projeleriniz İçin Uzman Ekibimizle Çalışın</h2>
+          <p style="color: #f3f4f6">
+            Gösterdiğimiz bu başarılı projelerin bir parçası olmak ve sizin de
+            projenizi gerçekleştirmek için bizimle iletişime geçin
+          </p>
+          <div class="cta-buttons">
+            <a href="bize_ulasin.html" class="btn-primary">
+              <i class="fas fa-phone"></i>
+              <span>Hemen Teklif Alın</span>
+            </a>
+            <a href="hizmetlerimiz.html" class="btn-secondary">
+              <span>Hizmetlerimizi İnceleyin</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder">
+      <!-- Footer component buraya yüklenecek -->
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Component Loader -->
+    <script src="components/component-loader.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Gallery functionality
+      let currentLightboxIndex = 0;
+      let currentImages = [];
+      let visibleItems = 12;
+
+      // Filter functionality
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const filter = this.dataset.filter;
+
+          // Update active button
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+
+          // Filter items
+          const items = document.querySelectorAll(".gallery-item");
+          items.forEach((item) => {
+            if (filter === "all" || item.dataset.category === filter) {
+              item.style.display = "block";
+              item.style.animation = "fadeInScale 0.5s ease-out";
+            } else {
+              item.style.display = "none";
+            }
+          });
+
+          // Reset visible items
+          visibleItems = 12;
+          updateVisibility();
+        });
+      });
+
+      // Lightbox functionality
+      function openLightbox(src, caption) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightboxImage").src = src;
+        document.getElementById("lightboxCaption").textContent = caption;
+        document.body.style.overflow = "hidden";
+
+        // Prepare navigation
+        const visibleItems = Array.from(
+          document.querySelectorAll(".gallery-item")
+        ).filter((item) => item.style.display !== "none");
+        currentImages = visibleItems.map((item) => ({
+          src: item.querySelector("img").src,
+          caption: item.querySelector("img").alt,
+        }));
+        currentLightboxIndex = currentImages.findIndex(
+          (img) => img.src === src
+        );
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function changeLightboxImage(direction) {
+        currentLightboxIndex += direction;
+        if (currentLightboxIndex >= currentImages.length)
+          currentLightboxIndex = 0;
+        if (currentLightboxIndex < 0)
+          currentLightboxIndex = currentImages.length - 1;
+
+        const currentImage = currentImages[currentLightboxIndex];
+        document.getElementById("lightboxImage").src = currentImage.src;
+        document.getElementById("lightboxCaption").textContent =
+          currentImage.caption;
+      }
+
+      // Close lightbox with escape key
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeLightbox();
+        } else if (e.key === "ArrowLeft") {
+          changeLightboxImage(-1);
+        } else if (e.key === "ArrowRight") {
+          changeLightboxImage(1);
+        }
+      });
+
+      // Load more functionality
+      function updateVisibility() {
+        const items = Array.from(
+          document.querySelectorAll(".gallery-item")
+        ).filter((item) => item.style.display !== "none");
+
+        items.forEach((item, index) => {
+          if (index < visibleItems) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
+        });
+
+        const loadMoreBtn = document.getElementById("loadMoreBtn");
+        if (visibleItems >= items.length) {
+          loadMoreBtn.style.display = "none";
+        } else {
+          loadMoreBtn.style.display = "block";
+        }
+      }
+
+      document
+        .getElementById("loadMoreBtn")
+        .addEventListener("click", function () {
+          visibleItems += 8;
+          updateVisibility();
+        });
+
+      // Counter animation - removed
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        updateVisibility();
+      });
+    </script>
+  </body>
+</html>

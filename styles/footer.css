@@ -1,0 +1,264 @@
+/* styles/components/footer.css - Footer Component Stilleri */
+
+/* Footer */
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 3rem 0 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section h3 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.footer-section h4 {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact-list .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-list .contact-item i {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  min-width: 20px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a,
+.professional-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.professional-links a:hover {
+  color: var(--accent-color);
+}
+
+.working-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hour-item span:first-child {
+  font-weight: 500;
+}
+
+.hour-item span:last-child {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer Social Links - White Icons */
+.footer-social .social-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-social .social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.professional-links {
+  list-style: none;
+}
+
+.professional-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-bottom a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design - Footer */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    text-align: left;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
+  }
+
+  .contact-list .contact-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .footer-links,
+  .professional-links {
+    text-align: left;
+  }
+
+  .footer .social-links {
+    justify-content: flex-start;
+  }
+
+  .working-hours {
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-list .contact-item {
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.75rem;
+  }
+
+  .contact-list .contact-item i {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 0;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-list .contact-item {
+    font-size: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .contact-list .contact-item i {
+    font-size: 1rem;
+  }
+
+  .footer-links li,
+  .professional-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a,
+  .professional-links a {
+    font-size: 0.9rem;
+  }
+
+  .working-hours {
+    max-width: none;
+  }
+
+  .hour-item {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+  }
+
+  .footer-social .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-bottom {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .footer {
+    display: none;
+  }
+}

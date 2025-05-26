@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bize Ulaşın - AS GEO ZEMİN</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/bize_ulasin.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Component Placeholder -->
+    <div id="navbar-placeholder">
+      <!-- Navbar component buraya yüklenecek -->
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-bg">
+        <div class="page-header-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="page-header-content">
+          <nav class="breadcrumb">
+            <a href="index.html">Anasayfa</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Bize Ulaşın</span>
+          </nav>
+          <h1 class="page-title">Bize Ulaşın</h1>
+          <p class="page-subtitle">
+            Projeleriniz için bizimle iletişime geçin, size en iyi hizmeti
+            sunalım
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <div class="form-header">
+              <h2>İletişim Formu</h2>
+              <p>
+                Bizimle iletişime geçmek için formu doldurun, size en kısa
+                sürede dönüş yapalım
+              </p>
+            </div>
+
+            <form
+              class="contact-form"
+              id="contactForm"
+              method="POST"
+              action="contact-submit.php"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">
+                    <i class="fas fa-user"></i>
+                    <span>Ad *</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Adınız"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">
+                    <i class="fas fa-user"></i>
+                    <span>Soyad *</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Soyadınız"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">
+                    <i class="fas fa-envelope"></i>
+                    <span>E-posta *</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ornek@email.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>Telefon</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+90 555 123 45 67"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="company">
+                  <i class="fas fa-building"></i>
+                  <span>Şirket/Kurum</span>
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Şirket adınız"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="service">
+                  <i class="fas fa-cogs"></i>
+                  <span>Hizmet Türü</span>
+                </label>
+                <select id="service" name="service">
+                  <option value="">Hizmet seçiniz</option>
+                  <option value="zemin-etudu">Zemin Etüdü</option>
+                  <option value="sondaj">Sondaj Çalışmaları</option>
+                  <option value="laboratuvar">Zemin Laboratuvarı</option>
+                  <option value="madencilik">Madencilik Danışmanlığı</option>
+                  <option value="diger">Diğer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">
+                  <i class="fas fa-calculator"></i>
+                  <span>Bütçe Aralığı</span>
+                </label>
+                <select id="budget" name="budget">
+                  <option value="">Bütçe aralığı seçiniz</option>
+                  <option value="0-50000">0 - 50.000 TL</option>
+                  <option value="50000-100000">50.000 - 100.000 TL</option>
+                  <option value="100000-250000">100.000 - 250.000 TL</option>
+                  <option value="250000+">250.000+ TL</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment"></i>
+                  <span>Mesajınız *</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Proje detaylarınızı, özel isteklerinizi ve sorularınızı buraya yazabilirsiniz..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
+                    <a href="#" class="privacy-link"
+                      >Kişisel Verilerin Korunması</a
+                    >
+                    kapsamında bilgilerimin işlenmesini kabul ediyorum. *
+                  </span>
+                </label>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="newsletter" name="newsletter" />
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
+                    Kampanya ve güncellemelerden haberdar olmak istiyorum.
+                  </span>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Mesajı Gönder</span>
+                </button>
+                <button type="reset" class="reset-btn">
+                  <i class="fas fa-redo"></i>
+                  <span>Formu Temizle</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info-section">
+            <div class="info-header">
+              <h3>İletişim Bilgileri</h3>
+              <p>Bize doğrudan ulaşabileceğiniz kanallar</p>
+            </div>
+
+            <div class="contact-info-cards">
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h4>Adres</h4>
+                  <p>
+                    Barbaros Mah. Atatürk Cad. No:28/2<br />Başiskele / Kocaeli
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/place/Barbaros,+Atat%C3%BCrk+Cd.,+41090+Ba%C5%9Fiskele%2FKocaeli"
+                    target="_blank"
+                    class="map-link"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Haritada Görüntüle</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h4>Telefon</h4>
+                  <p>
+                    <a href="tel:+902623432221">0262 343 22 21</a><br />
+                    <a href="tel:+905327148902">0532 714 89 02</a>
+                  </p>
+                  <span class="availability"
+                    >Pazartesi - Cumartesi: 09:00 - 18:00</span
+                  >
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h4>E-posta</h4>
+                  <p>
+                    <a href="mailto:info@asgeozemin.com">info@asgeozemin.com</a>
+                  </p>
+                  <span class="availability">24 saat içinde yanıt</span>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-info-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div class="contact-info-details">
+                  <h4>Web Site</h4>
+                  <p>
+                    <a href="http://www.asgeozemin.com" target="_blank"
+                      >www.asgeozemin.com</a
+                    >
+                  </p>
+                  <span class="availability">Online hizmet bilgileri</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="contact-social-media">
+              <h4>Sosyal Medya</h4>
+              <div class="contact-social-links">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  title="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  title="Twitter"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  title="LinkedIn"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  title="YouTube"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=+905327148902&text=Merhaba,%20bilgi%20almak%20istiyorum."
+                  target="_blank"
+                  title="WhatsApp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Contact -->
+            <div class="quick-contact">
+              <h4>Hızlı İletişim</h4>
+              <div class="quick-buttons">
+                <a href="tel:+905327148902" class="quick-btn call-btn">
+                  <i class="fas fa-phone"></i>
+                  <span>Hemen Ara</span>
+                </a>
+                <a
+                  href="https://api.whatsapp.com/send?phone=+905327148902&text=Merhaba,%20bilgi%20almak%20istiyorum."
+                  target="_blank"
+                  class="quick-btn whatsapp-btn"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container">
+        <div class="map-header">
+          <h2>Ofis Konumumuz</h2>
+          <p>Kocaeli Başiskele'de merkezi konumumuzda hizmet veriyoruz</p>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.8756!2d29.9288093!3d40.7114156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb44f542712f81%3A0x2fa5171430b4943d!2sBarbaros%2C%20Atat%C3%BCrk%20Cd.%2C%2041090%20Ba%C5%9Fiskele%2FKocaeli!5e0!3m2!1str!2str!4v1"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+          <div class="map-overlay">
+            <div class="map-info">
+              <h4>AS GEO ZEMİN</h4>
+              <p>Barbaros Mah. Atatürk Cad. No:28/2<br />Başiskele / Kocaeli</p>
+              <a
+                href="https://www.google.com/maps/dir//Barbaros,+Atat%C3%BCrk+Cd.,+41090+Ba%C5%9Fiskele%2FKocaeli"
+                target="_blank"
+                class="directions-btn"
+              >
+                <i class="fas fa-directions"></i>
+                <span>Yol Tarifi Al</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-header">
+          <h2>Sıkça Sorulan Sorular</h2>
+          <p>En çok merak edilen sorular ve cevapları</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Zemin etüdü ne kadar sürer?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Projenin büyüklüğüne ve karmaşıklığına bağlı olarak zemin etüdü
+                1-4 hafta arasında tamamlanır. Küçük projeler için 3-5 gün,
+                büyük projeler için 2-4 hafta sürebilir.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Fiyat teklifi nasıl alınır?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yukarıdaki formu doldurarak veya telefon ile bizimle iletişime
+                geçebilirsiniz. Proje detaylarını değerlendirdikten sonra 24
+                saat içinde size detaylı teklif sunuyoruz.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Hangi bölgelerde hizmet veriyorsunuz?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Başta Kocaeli olmak üzere İstanbul, Sakarya, Yalova, Bursa ve
+                Marmara Bölgesi'nin tamamında hizmet veriyoruz. Özel projeler
+                için Türkiye genelinde hizmet sunabiliriz.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Acil durumlar için nasıl iletişim kurulur?</h4>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Acil durumlar için 7/24 ulaşabileceğiniz telefon numaramız: 0532
+                714 89 02. WhatsApp üzerinden de anında iletişim kurabilirsiniz.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Component Placeholder -->
+    <div id="footer-placeholder">
+      <!-- Footer component buraya yüklenecek -->
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Component Loader -->
+    <script src="components/component-loader.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Form validation and submission with AJAX
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Sayfa yönlendirmesini engelle
+
+          // Basic validation
+          const requiredFields = [
+            "firstName",
+            "lastName",
+            "email",
+            "message",
+            "consent",
+          ];
+          let isValid = true;
+
+          requiredFields.forEach((field) => {
+            const element = document.getElementById(field);
+            if (
+              !element.value.trim() ||
+              (field === "consent" && !element.checked)
+            ) {
+              element.classList.add("error");
+              isValid = false;
+            } else {
+              element.classList.remove("error");
+            }
+          });
+
+          if (isValid) {
+            // Form verilerini topla
+            const formData = new FormData(this);
+
+            // Gönderme butonunu devre dışı bırak
+            const submitBtn = document.querySelector(".submit-btn");
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML =
+              '<i class="fas fa-spinner fa-spin"></i> <span>Gönderiliyor...</span>';
+            submitBtn.disabled = true;
+
+            // AJAX ile PHP'ye gönder
+            fetch("contact-submit.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.success) {
+                  // Başarılı mesaj göster
+                  showNotification(data.message, "success");
+                  this.reset(); // Formu temizle
+                } else {
+                  // Hata mesajı göster
+                  showNotification(data.message || "Bir hata oluştu", "error");
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+                showNotification(
+                  "Bağlantı hatası oluştu. Lütfen tekrar deneyin.",
+                  "error"
+                );
+              })
+              .finally(() => {
+                // Butonu tekrar aktif et
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+              });
+          } else {
+            showNotification("Lütfen zorunlu alanları doldurun.", "error");
+          }
+        });
+
+      // FAQ toggle functionality
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", function () {
+          const faqItem = this.parentElement;
+          const isActive = faqItem.classList.contains("active");
+
+          // Close all FAQ items
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          // Open clicked item if it wasn't active
+          if (!isActive) {
+            faqItem.classList.add("active");
+          }
+        });
+      });
+
+      // Notification system
+      function showNotification(message, type) {
+        // Önceki bildirimleri temizle
+        const existingNotifications =
+          document.querySelectorAll(".notification");
+        existingNotifications.forEach((notif) => notif.remove());
+
+        const notification = document.createElement("div");
+        notification.className = `notification ${type}`;
+        notification.innerHTML = `
+                <i class="fas ${
+                  type === "success"
+                    ? "fa-check-circle"
+                    : "fa-exclamation-circle"
+                }"></i>
+                <span>${message}</span>
+                <button onclick="this.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+
+        // Notification stillerini ekle
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: ${type === "success" ? "#4CAF50" : "#f44336"};
+          color: white;
+          padding: 15px 20px;
+          border-radius: 5px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          z-index: 10000;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          max-width: 400px;
+          font-family: Arial, sans-serif;
+        `;
+
+        document.body.appendChild(notification);
+
+        // 5 saniye sonra otomatik kaldır
+        setTimeout(() => {
+          if (notification.parentElement) {
+            notification.remove();
+          }
+        }, 5000);
+      }
+
+      // Phone number formatting
+      document.getElementById("phone").addEventListener("input", function (e) {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.startsWith("90")) {
+          value = value.substring(2);
+        }
+        if (value.length > 0) {
+          value = value.replace(/(\d{3})(\d{3})(\d{2})(\d{2})/, "$1 $2 $3 $4");
+          e.target.value = "+90 " + value;
+        }
+      });
+    </script>
+  </body>
+</html>
